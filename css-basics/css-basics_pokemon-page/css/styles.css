@@ -12,7 +12,7 @@
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements in your code via inheritance. Which selector do we need for this? */
 
 /* Add selector */
-* {
+body {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
@@ -24,6 +24,9 @@
 /* Task 3: Setting the line height to 1.5 is good for texts, for accessibility reasons, but it seems too much for headings. Let's change this by giving our headings a line height of 1.2. */
 
 /* Your solution */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
 
 /* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside the next CSS rule:
 
