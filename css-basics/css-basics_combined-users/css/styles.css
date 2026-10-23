@@ -99,6 +99,10 @@ aside .user .bio {
   margin: 6px 0;
 }
 
+aside .user .location {
+  font-size: 10px;
+}
+
 /*
   Part 2
 
