@@ -46,6 +46,8 @@ Make sure not to put your code into the comments, because then nothing will happ
 
 .button3 {
   /* Style me! You can test out changing the font, font size, ...*/
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
 }
 
 .button4 {
