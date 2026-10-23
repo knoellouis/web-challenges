@@ -33,11 +33,15 @@ Make sure not to put your code into the comments, because then nothing will happ
 .button1 {
   /* Style me! Change my border, set a border radius or try out other styles. :) */
   border: 2px solid #333;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .button2 {
   /* Style me! Change my color or background-color, or both! You can experiment with different color formats here, like HEX, RGB, etc. */
+  background-color: #ba1bcc;
+  color: #d8d3d3;
+  border: none;
+  border-radius: 50px;
 }
 
 .button3 {
