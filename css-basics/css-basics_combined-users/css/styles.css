@@ -89,6 +89,11 @@ aside .user {
   padding: 12px;
   border-radius: 4px;
 }
+
+aside .user .name {
+  font-size: 16px;
+}
+
 /*
   Part 2
 
