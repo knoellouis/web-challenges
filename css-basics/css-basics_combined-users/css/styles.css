@@ -84,6 +84,11 @@ li {
   like <body>, <main>, <aside>, <ul>, and .user with labeled overlays for easy identification.
 */
 
+aside .user {
+  max-width: 250px;
+  padding: 12px;
+  border-radius: 4px;
+}
 /*
   Part 2
 
