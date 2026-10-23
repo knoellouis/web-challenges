@@ -94,6 +94,11 @@ aside .user .name {
   font-size: 16px;
 }
 
+aside .user .bio {
+  font-size: 12px;
+  margin: 6px 0;
+}
+
 /*
   Part 2
 
