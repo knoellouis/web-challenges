@@ -32,6 +32,8 @@ Make sure not to put your code into the comments, because then nothing will happ
 
 .button1 {
   /* Style me! Change my border, set a border radius or try out other styles. :) */
+  border: 2px solid #333;
+  border-radius: 5px;
 }
 
 .button2 {
