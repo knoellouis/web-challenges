@@ -78,6 +78,11 @@ section.favourites {
 
 .subtitle {
   /* Your solution */
+  border-left: 3px solid gold;
+  border-right: 3px solid gold;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
 }
 
 /* ------- List ------- */
