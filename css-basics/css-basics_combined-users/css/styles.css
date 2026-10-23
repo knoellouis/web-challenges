@@ -114,3 +114,7 @@ aside .user .location {
 
   💡 You can use the display property to hide elements.
 */
+
+ul .user .bio {
+  display: none;
+}
