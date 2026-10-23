@@ -62,7 +62,9 @@ section {
   border-left: 5px solid orange;
 }
 
-
+section.favorites {
+  border-left-color: gold;
+}
 
 /* ------- Headings Part 2 ------- */
 
