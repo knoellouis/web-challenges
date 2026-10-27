@@ -2,6 +2,7 @@
   --color-granite: #252629;
   --color-nemo: #ff4a11;
   --color-foam: #ffffff;
+  --color-purple-opacity: #8336ff73;
 }
 
 *,
@@ -17,7 +18,7 @@ body {
 }
 
 header {
-  background: rgba(131, 54, 255, 0.451);
+  background: var(--color-purple-opacity);
 }
 
 h1 {
@@ -88,7 +89,7 @@ a {
 
 a:hover,
 a:focus-visible {
-  background-color: #8336ff7b;
+  background-color: var(--color-purple-opacity);
   text-decoration: none;
 }
 
