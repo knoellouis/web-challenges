@@ -118,9 +118,3 @@ h1 {
 .box--five img {
   width: 100%;
 }
-
-@media screen and (min-width: 599px) {
-  .box--five img {
-    src: url("../img/cat_medium.jpg");
-  }
-}
