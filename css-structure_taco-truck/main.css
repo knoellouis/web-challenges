@@ -10,6 +10,16 @@
 
   --card-bg: #8336ff7b;
   --card-text: #201e1d;
+
+  --footer-bg: #6c39b3;
+  --footer-text: #fddcd2;
+
+  --button-bg: #ff4a11;
+  --button-bg-hover: #3f0097;
+  --button-text: #fddcd2;
+
+  --base-width: 92%;
+  --max-width: 1200px;
 }
 
 /* -------------------------------------------------------- */
