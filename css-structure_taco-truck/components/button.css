@@ -1,0 +1,14 @@
+.card__button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card__button:hover {
+  background-color: var(--button-bg-hover);
+  color: var(--button-text);
+}
