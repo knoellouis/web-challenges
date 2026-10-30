@@ -10,6 +10,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const postTitle = "Vacation in Marbella";
+const postText =
+  "Day 5 in beautiful Marbella, Spain. We've been lucky because everyday has been warm and sunny. The evenings are cool and comfortable and the cherry on top: everywhere is open until late (thank you siesta) #vacation #marbella #spain #livinglife #vacationmode";
+let numberOfLikes = 7321;
+const userName = "travelust";
+let isReported = false;
 
 // --^-- write your code here --^--
 
