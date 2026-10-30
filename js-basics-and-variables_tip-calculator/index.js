@@ -17,3 +17,14 @@ based on the cost of the meal and the percentage of the tip.
 
 const mealCost = 400;
 const tipPercentage = 15;
+const tipAmount = mealCost * (tipPercentage / 100);
+const totalCost = mealCost + tipAmount;
+
+console.log(
+  "Meal Cost:",
+  mealCost,
+  "Tip:",
+  tipAmount,
+  "Total cost:",
+  totalCost,
+);
