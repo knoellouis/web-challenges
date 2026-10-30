@@ -1,3 +1,5 @@
+const { use } = require("react");
+
 console.clear();
 
 /*
@@ -24,5 +26,10 @@ let isReported = false;
 */
 
 // --v-- write your code here --v--
+console.log("Title:", postTitle);
+console.log("Text:", postText);
+console.log("Likes:", numberOfLikes);
+console.log("Username:", userName);
+console.log("Reported:", isReported);
 
 // --^-- write your code here --^--
