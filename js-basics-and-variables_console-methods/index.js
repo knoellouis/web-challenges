@@ -8,8 +8,10 @@ console.clear();
 const coding = "Happy coding!";
 
 // 2. Display the variable 'coding' as a message in the console.
+console.log(coding);
 
 // 3. Store the sentence 'Happy hacking!' in a variable named 'hacking'.
+const hacking = "Happy hacking!";
 
 // 4. Display the variable 'hacking' as a message in the console.
 
