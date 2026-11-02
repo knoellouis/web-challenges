@@ -1,0 +1,22 @@
+{
+  "name": "js-objects-and-arrays_objects",
+  "version": "0.0.0-unreleased",
+  "description": "Exercise to objects",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx -y live-server@latest --port=3000",
+    "lint": "npx -y eslint@latest .",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx -y jest@latest --watchAll"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@types/jest": "^29.5.2",
+    "eslint": "^10.14.0",
+    "eslint-plugin-jest": "^21.27.2",
+    "jest": "^25.1.0"
+  },
+  "type": "module",
+  "nf": {
+    "template": "js"
+  }
+}
