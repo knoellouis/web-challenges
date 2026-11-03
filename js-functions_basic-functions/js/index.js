@@ -48,7 +48,7 @@ logBookData(4.9, 300);
 */
 
 // --v-- write your code here --v--
-function logBookData(newRating, newSales = 0) {
+function logBookData(newRating = bookRating, newSales = 0) {
   const sales = (copiesSold += newSales);
 
   console.log(`Title: ${bookTitle},
