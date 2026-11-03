@@ -32,15 +32,9 @@ Then:
 // --v-- write your code here --v--
 logBookData();
 
-bookRating = 4.8;
-copiesSold += 550;
+logBookData(4.8, 550);
 
-logBookData();
-
-bookRating = 4.9;
-copiesSold += 300;
-
-logBookData();
+logBookData(4.9, 300);
 
 // --^-- write your code here --^--
 
@@ -54,10 +48,12 @@ logBookData();
 */
 
 // --v-- write your code here --v--
-function logBookData() {
+function logBookData(newRating, newSales = 0) {
+  const sales = (copiesSold += newSales);
+
   console.log(`Title: ${bookTitle},
   Author: ${bookAuthor},
-  Rating: ${bookRating},
-  Sales: ${copiesSold}`);
+  Rating: ${newRating},
+  Sales: ${sales}`);
 }
 // --^-- write your code here --^--
