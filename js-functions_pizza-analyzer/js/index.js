@@ -10,11 +10,13 @@ let output = document.querySelector('[data-js="output"]');
 pizzaInput1.addEventListener("input", () => {
   // Write your code here
   handleInputEvent(pizzaInput1, pizzaInput2);
+  updatePizzaDisplay(pizza1, pizzaInput1.value);
 });
 
 pizzaInput2.addEventListener("input", () => {
   // Write your code here
   handleInputEvent(pizzaInput1, pizzaInput2);
+  updatePizzaDisplay(pizza2, pizzaInput2.value);
 });
 
 // Task 1: Define the function `calculatePizzaGain` here
@@ -35,6 +37,9 @@ function handleInputEvent(pizzaInput1, pizzaInput2) {
 
 // Task 2: Define the function `updatePizzaDisplay` here
 
-function updatePizzaDisplay() {}
+function updatePizzaDisplay(pizzaElement, newSize) {
+  let pizzaElementNewSize = (newSize / 24) * 100;
+  pizzaElement.style.width = `${pizzaElementNewSize}px`;
+}
 
 // Task 3: Define the function `updateOutputColor` here
