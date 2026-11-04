@@ -11,12 +11,14 @@ const output = document.querySelector('[data-js="output"]');
 
 // Event listeners
 pizzaInput1.addEventListener("input", () => {
-  updatePizzaDisplay(pizza1, pizzaInput1.value);
+  const pizzaSize1 = pizzaInput1.value;
+  updatePizzaDisplay(pizza1, pizzaSize1);
   handleInputEvent();
 });
 
 pizzaInput2.addEventListener("input", () => {
-  updatePizzaDisplay(pizza2, pizzaInput2.value);
+  const pizzaSize2 = pizzaInput2.value;
+  updatePizzaDisplay(pizza2, pizzaSize2);
   handleInputEvent();
 });
 
