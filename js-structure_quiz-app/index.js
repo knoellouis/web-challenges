@@ -1,3 +1,5 @@
+import App from "../../components/App.js";
+
 const cards = [
   {
     question:
@@ -21,16 +23,6 @@ const cards = [
     isBookmarked: false,
   },
 ];
-
-function Header() {
-  const header = document.createElement("header");
-  header.classList.add("header");
-  header.innerHTML = /* html */ `
-	  <h1 class="header__title">Quiz-App</h1>
-	`;
-
-  return header;
-}
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -150,7 +142,7 @@ function Card(props) {
   const answer = card.querySelector('[data-js="answer"]');
   const tags = card.querySelector('[data-js="tags"]');
   const bookmarkButtonWrapper = card.querySelector(
-    '[data-js="bookmark-button-wrapper"]'
+    '[data-js="bookmark-button-wrapper"]',
   );
 
   question.textContent = props.question;
@@ -195,14 +187,6 @@ function CardList() {
   });
 
   return cardList;
-}
-
-function App() {
-  const app = document.createElement("main");
-  app.classList.add("app");
-  app.append(Header(), Form(), CardList());
-
-  return app;
 }
 
 // The render function renders the app to the DOM
