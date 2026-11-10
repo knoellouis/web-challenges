@@ -23,7 +23,6 @@ export async function fetchNewColor() {
 
   const colorCode = data.hex.value;
   const colorName = data.name.value;
-  console.log(data, colorCode, colorName);
 
   setColorToGuess(colorCode, colorName);
   // --^-- your code here --^--
