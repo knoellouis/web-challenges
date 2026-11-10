@@ -1,11 +1,11 @@
-import Header from "../../components/Header.js";
-import Form from "../../components/Form.js";
-import Cardlist from "../../components/Cardlist.js";
+import { Header } from "../Header/Header.js";
+import { Form } from "../Form/Form.js";
+import { CardList } from "../CardList/CardList.js";
 
-function App() {
+export function App() {
   const app = document.createElement("main");
   app.classList.add("app");
-  app.append(Header(), Form(), Cardlist());
+  app.append(Header(), Form(), CardList());
 
   return app;
 }
