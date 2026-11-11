@@ -24,13 +24,35 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+const onlyCardWithIdTwo = cards.filter((card) => {
+  card.id === "2" ? console.log(card) : "";
+});
 
-const allCardsWith3Tags = null;
+console.log(
+  " Only Card with id 2 ----------------------------------------------",
+);
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsWith3Tags = cards.filter((card) => {
+  card.tags.length === 3 ? console.log(card) : "";
+});
+console.log("allCardsWith3Tags ----------------------------------------------");
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+const allCardsThatAreNotBookmarked = cards.filter((card) => {
+  card.isBookmarked === false ? console.log(card) : "";
+});
+console.log(
+  "allCardsThatAreNotBookmarked ----------------------------------------------",
+);
+
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
+  const hasMatchingTag = card.tags.some((tag) => {
+    return tag === "html" || tag === "js";
+  });
+  card.isBookmarked && hasMatchingTag ? console.log(card) : "";
+});
+console.log(
+  "allCardsWithTagsHTMLOrJSThatAreBookmarked ----------------------------------------------",
+);
 
 export {
   onlyCardWithIdTwo,
