@@ -6,26 +6,24 @@ import { employees } from "../utils/db.js";
 // Check the browser preview and conduct some tests to ensure it works correctly.
 
 function findByLastName(employees, lastName) {
-  employees.some((employee) => {
-    return employee.lastName.toLowerCase() === lastName.toLowerCase();
-  });
-
-  // Exercise 2:
-  // The same as above, but now you are searching by the 'id'.
+  return employees.find(
+    (employee) => employee.lastName.toLowerCase() === lastName.toLowerCase(),
+  );
 }
+// Exercise 2:
+// The same as above, but now you are searching by the 'id'.
+
 function findById(employees, id) {
-  employees.some((employee) => {
-    return employee.id === id;
-  });
+  return employees.find((employee) => Number(employee.id) === Number(id));
 }
 
 // Exercise 3:
 // This time you want to find an employee who lives in a city that includes a specific substring.
 
 function findByCitySubString(employees, string) {
-  employees.includes((employee) => {
-    return employee.address === string;
-  });
+  return employees.find((employee) =>
+    employee.city.toLowerCase().includes(string.toLowerCase()),
+  );
 }
 
 // Bonus:
@@ -33,7 +31,11 @@ function findByCitySubString(employees, string) {
 // AND who is older than a specific age
 
 function findByProfessionSubStringAndAge(employees, string, age) {
-  return null;
+  return employees.find(
+    (employee) =>
+      employee.profession.toLowerCase().includes(string.toLowerCase()) &&
+      Number(employee.age) === Number(age),
+  );
 }
 
 // ------------------------------------------------------------------------------
