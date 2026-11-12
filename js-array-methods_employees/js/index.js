@@ -6,20 +6,26 @@ import { employees } from "../utils/db.js";
 // Check the browser preview and conduct some tests to ensure it works correctly.
 
 function findByLastName(employees, lastName) {
-  return null;
+  employees.some((employee) => {
+    return employee.lastName.toLowerCase() === lastName.toLowerCase();
+  });
 
   // Exercise 2:
   // The same as above, but now you are searching by the 'id'.
 }
 function findById(employees, id) {
-  return null;
+  employees.some((employee) => {
+    return employee.id === id;
+  });
 }
 
 // Exercise 3:
 // This time you want to find an employee who lives in a city that includes a specific substring.
 
 function findByCitySubString(employees, string) {
-  return null;
+  employees.includes((employee) => {
+    return employee.address === string;
+  });
 }
 
 // Bonus:
@@ -82,7 +88,7 @@ form4.addEventListener("submit", (event) => {
   const result = findByProfessionSubStringAndAge(
     employees,
     event.target.exercise4.value,
-    event.target.exercise4b.value
+    event.target.exercise4b.value,
   );
   if (result) {
     exercise4.append(createCard(result));
