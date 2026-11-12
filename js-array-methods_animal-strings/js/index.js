@@ -21,15 +21,19 @@ const animalStrings = [
   "rhino",
 ];
 
-const hippoExists = null;
+const hippoExists = animalStrings.some((animal) => animal === "hippo");
 
 // Hint: You can pass the starting index as second parameter.
-const catStartingFromIndexFiveExists = null;
+const catStartingFromIndexFiveExists = animalStrings.includes("cat", 5);
 
 // Hint: Besides the array method, check out the string method `startsWith()`.
-const firstAnimalStartingWithLetterP = null;
+const firstAnimalStartingWithLetterP = animalStrings.find((animal) =>
+  animal.startsWith("p"),
+);
 
-const indexOfGiraffe = null;
+const indexOfGiraffe = animalStrings.findIndex(
+  (animal) => animal === "giraffe",
+);
 
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
