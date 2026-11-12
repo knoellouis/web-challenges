@@ -9,7 +9,15 @@ async function fetchUserData(url) {
     const response = await fetch(url, {
       headers: { "x-api-key": "reqres_c0aaf46c1fa2400e8fb8669bacd63171" },
     });
-
+    const contentType = response.headers.get("content-type");
+    if (!contentType.includes("application/json")) {
+      throw new Error(
+        `Invalid API Link: Expected JSON content, got HTML instead`,
+      );
+    }
+    if (!response.ok) {
+      throw new Error(`error: ${response.status}, User was not found`);
+    }
     return await response.json();
   } catch (error) {
     return { error: error.message };
