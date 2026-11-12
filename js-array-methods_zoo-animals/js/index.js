@@ -5,6 +5,12 @@ import { zooAnimals } from "../utils/db.js";
 // The function should return 'true' if the animal name is included in the array or 'false' if not.
 
 function hasAnimal(animals, animalName) {
+  animals.filter((animal) => {
+    if (animal.name === animalName) return true;
+    else {
+      return false;
+    }
+  });
   return null;
 }
 
