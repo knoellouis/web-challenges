@@ -7,7 +7,7 @@ try reversing the challenge by rewriting this code without using these modern fe
 
 // export const getRelocatedCity = (
 //   city1,
-//   city2 = { name: "Berlin", country: "Germany" }
+//   city2 = { name: "Berlin", country: "Germany" },
 // ) => {
 //   const [, country] = getNameAndCountry(city2);
 //   return {
@@ -16,12 +16,23 @@ try reversing the challenge by rewriting this code without using these modern fe
 //   };
 // };
 
-export function getNameAndCountry(obj) {
-  obj = {
-    name: obj.name,
-    country: obj.country,
-  };
-  return [(name = obj.name), (country = obj.country)];
+export function getNameAndCountry(city) {
+  return [city.name, city.country];
 }
 
-getNameAndCountry({ name: "Hamburg", country: "Germany" });
+export function getRelocatedCity(city1, city2) {
+  city2 = city2 || { name: "Berlin", country: "Germany" };
+
+  const country = getNameAndCountry(city2)[1];
+
+  const relocatedCity = {};
+
+  for (const key in city1) {
+    if (Object.hasOwn(city1, key)) {
+      relocatedCity[key] = city1[key];
+    }
+  }
+
+  relocatedCity.country = country;
+  return relocatedCity;
+}
