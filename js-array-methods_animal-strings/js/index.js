@@ -46,18 +46,28 @@ const indexOfGiraffe = animalStrings.findIndex(
 const animalsSortedAlphabetically = animalStrings.toSorted((a, b) =>
   a > b ? +1 : -1,
 );
-console.log(animalsSortedAlphabetically);
 
 // Hint: Guess what? There is a string method called `endsWith()`.
-const anyAnimalEndsWithLetterZ = null;
+const anyAnimalEndsWithLetterZ = animalStrings.some((animal) =>
+  animal.endsWith("z"),
+);
 
-const everyAnimalHasMoreThanTwoLetters = null;
+const everyAnimalHasMoreThanTwoLetters = animalStrings.every((animal) => {
+  return animal.length > 2;
+});
 
 // Hint: There are several ways to go here. Let's focus on two options:
 // Option 1: Concatenate all characters with `reduce()` and check for the `length` property of the result.
 // Option 2: Use `map()` to create an array with the length values of all strings,
 // 				then sum them up with `reduce()` (keyword: method chaining)
-const sumOfAllAnimalCharacters = null;
+const animalLengths = animalStrings.map((animal) => animal.length);
+const initialValue = 0;
+const sumOfAllAnimalCharacters = animalLengths.reduce(
+  (accumulator, currentValue) => {
+    return accumulator + currentValue;
+  },
+  initialValue,
+);
 
 export {
   hippoExists,
