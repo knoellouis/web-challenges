@@ -105,4 +105,3 @@ export function getLastNamesSortedByAge(people) {
     people.toSorted((a, b) => a.age - b.age).map((person) => person.lastName)
   );
 }
-getLastNamesSortedByAge(people);
