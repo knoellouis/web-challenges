@@ -70,18 +70,50 @@ test('getNameAndAge() returns an array of formatted strings like this: "Skywalke
   ]);
 });
 
-test("getPeopleByAge() returns an array of people of a certain age", () => {});
+test("getPeopleByAge() returns an array of people of a certain age", () => {
+  const result = getPeopleByAge(people, 21);
+  expect(result).toEqual(["Jane"]);
+});
 
-// test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {});
+test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
+  const result = getPeopleNamesOlderThan(people, 30);
+  expect(result).toEqual(["Max Mustermann", "Erika Musterfrau"]);
+});
 
-// test("getPeopleByLastName() returns an array of people of a certain lastName", () => {});
+test("getPeopleByLastName() returns an array of people of a certain lastName", () => {
+  const result = getPeopleByLastName(people, "Doe");
+  expect(result).toEqual(["Jane Doe", "John Doe"]);
+});
 
 // // Hint: use Array.prototype.find for the implementation
-// test("findPersonById() returns the full object of a person", () => {});
+test("findPersonById() returns the full object of a person", () => {
+  const result = findPersonById(people, 5);
+  expect(result).toEqual({
+    id: 5,
+    firstName: "Luke",
+    lastName: "Skywalker",
+    age: 23,
+  });
+});
 
 // // Hint: implementation should use Array.prototype.some
-// test("isAnyoneOlderThan() returns true if any person is older than the given age", () => {});
+test("isAnyoneOlderThan() returns true if any person is older than the given age", () => {
+  const result = isAnyoneOlderThan(people, 18);
+  expect(result).toBe = true;
+});
 
-// test("isAnyoneOlderThan() returns false if no person is older than the given age", () => {});
+test("isAnyoneOlderThan() returns false if any person is older than the given age", () => {
+  const result = isAnyoneOlderThan(people, 40);
+  expect(result).toBe = false;
+});
 
-// test("getLastNamesSortedByAge() returns an array of last names sorted by age", () => {});
+test("getLastNamesSortedByAge() returns an array of last names sorted by age", () => {
+  const result = getLastNamesSortedByAge(people);
+  expect(result).toEqual = [
+    "Doe",
+    "Doe",
+    "Skywalker",
+    "Mustermann",
+    "Musterfrau",
+  ];
+});

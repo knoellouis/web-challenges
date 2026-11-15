@@ -53,14 +53,56 @@ export function getNameAndAge(people) {
   return namesAndAges;
 }
 
-export function getPeopleByAge(people, age) {}
+export function getPeopleByAge(people, age) {
+  const peopleByAge = [];
+  people.filter((person) => {
+    if (person.age === age) {
+      peopleByAge.push(person.firstName);
+    }
+  });
+  return peopleByAge;
+}
 
-export function getPeopleNamesOlderThan(people, age) {}
+getPeopleByAge(people, 21);
 
-export function getPeopleByLastName(people, lastName) {}
+export function getPeopleNamesOlderThan(people, age) {
+  const peopleNamesOlderThan = [];
+  people.filter((person) => {
+    if (person.age > age) {
+      return peopleNamesOlderThan.push(
+        `${person.firstName} ${person.lastName}`
+      );
+    }
+  });
+  return peopleNamesOlderThan;
+}
 
-export function findPersonById(people, id) {}
+export function getPeopleByLastName(people, lastName) {
+  const peopleByLastName = [];
+  people.filter((person) => {
+    if (person.lastName === lastName) {
+      return peopleByLastName.push(`${person.firstName} ${person.lastName}`);
+    }
+  });
+  return peopleByLastName;
+}
 
-export function isAnyoneOlderThan(people, age) {}
+export function findPersonById(people, id) {
+  return people.find((person) => {
+    if (person.id === id) {
+      console.log(person);
+      return person;
+    }
+  });
+}
 
-export function getLastNamesSortedByAge(people) {}
+export function isAnyoneOlderThan(people, age) {
+  return people.some((person) => person.age > age);
+}
+
+export function getLastNamesSortedByAge(people) {
+  console.log(
+    people.toSorted((a, b) => a.age - b.age).map((person) => person.lastName)
+  );
+}
+getLastNamesSortedByAge(people);
