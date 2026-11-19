@@ -1,18 +1,53 @@
 export default function App() {
+  const handleClick = () => console.log("button Clicked");
+
   return (
     <>
-      <Button color="red" text="danger!!" />
-      <Button color="blue" disabled={false} text="safe" />
-      <Button color="green" disabled={false} text="go!" />
-      <Button color="orange" disabled text="wait" />
-      <Button color="yellow" disabled text="pending" />
+      <Button
+        backgroundColor="black"
+        color="red"
+        text="danger!!"
+        onClick={handleClick}
+      />
+      <Button
+        backgroundColor="black"
+        color="blue"
+        disabled={false}
+        text="safe"
+        onClick={handleClick}
+      />
+      <Button
+        backgroundColor="black"
+        color="green"
+        disabled={false}
+        text="go!"
+        onClick={handleClick}
+      />
+      <Button
+        backgroundColor="black"
+        color="orange"
+        disabled
+        text="wait"
+        onClick={handleClick}
+      />
+      <Button
+        backgroundColor="black"
+        color="yellow"
+        disabled
+        text="pending"
+        onClick={handleClick}
+      />
     </>
   );
 }
 
-function Button({ color, disabled, text }) {
+function Button({ backgroundColor, color, disabled, text, onClick }) {
   return (
-    <button style={{ color }} disabled={disabled}>
+    <button
+      onClick={onClick}
+      style={{ backgroundColor: backgroundColor, color: color }}
+      disabled={disabled}
+    >
       {text}
     </button>
   );
