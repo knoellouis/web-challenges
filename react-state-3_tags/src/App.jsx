@@ -9,10 +9,15 @@ export default function App() {
   const handleAddTag = (newTag) => {
     return setTags([...tags, newTag]);
   };
+
+  const handleDeleteTag = (tagToDelete) => {
+    const newTags = tags.filter((tag) => tag !== tagToDelete);
+    return setTags(newTags);
+  };
   return (
     <main className="app">
       <Form onAddTag={handleAddTag} />
-      <List tags={tags} />
+      <List onDeleteTag={handleDeleteTag} tags={tags} />
     </main>
   );
 }
